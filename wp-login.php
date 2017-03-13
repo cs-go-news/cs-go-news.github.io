@@ -8,22 +8,22 @@
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>cs go news &lsaquo; Войти</title>
-	<script type='text/javascript' src='http://cs-go-news.tk/wp-admin/load-scripts.php?c=1&amp;load%5B%5D=jquery-core,jquery-migrate&amp;ver=4.5.7'></script>
-<script type='text/javascript' src='http://cs-go-news.tk/wp-content/plugins/easy-vkontakte-connect/js/jquery.cookie.js'></script>
-<link rel='stylesheet' href='http://cs-go-news.tk/wp-admin/load-styles.php?c=1&amp;dir=ltr&amp;load%5B%5D=dashicons,buttons,forms,l10n,login&amp;ver=4.5.7' type='text/css' media='all' />
-<link rel='stylesheet' id='social-likes-classic-css'  href='http://cs-go-news.tk/wp-content/plugins/easy-vkontakte-connect/css/social-likes_classic.css?ver=4.5.7' type='text/css' media='all' />
+	<script type='text/javascript' src='http://csgo-news.ru/wp-admin/load-scripts.php?c=1&amp;load%5B%5D=jquery-core,jquery-migrate&amp;ver=4.5.7'></script>
+<script type='text/javascript' src='http://csgo-news.ru/wp-content/plugins/easy-vkontakte-connect/js/jquery.cookie.js'></script>
+<link rel='stylesheet' href='http://csgo-news.ru/wp-admin/load-styles.php?c=1&amp;dir=ltr&amp;load%5B%5D=dashicons,buttons,forms,l10n,login&amp;ver=4.5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='social-likes-classic-css'  href='http://csgo-news.ru/wp-content/plugins/easy-vkontakte-connect/css/social-likes_classic.css?ver=4.5.7' type='text/css' media='all' />
 <link rel='stylesheet' id='open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext&#038;ver=4.5.7' type='text/css' media='all' />
 <meta name='robots' content='noindex,follow' />
-<link rel="icon" href="http://cs-go-news.tk/wp-content/uploads/2016/03/cropped-logo112-150x150.png" sizes="32x32" />
-<link rel="icon" href="http://cs-go-news.tk/wp-content/uploads/2016/03/cropped-logo112-300x300.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="http://cs-go-news.tk/wp-content/uploads/2016/03/cropped-logo112-300x300.png" />
-<meta name="msapplication-TileImage" content="http://cs-go-news.tk/wp-content/uploads/2016/03/cropped-logo112-300x300.png" />
+<link rel="icon" href="http://csgo-news.ru/wp-content/uploads/2016/03/cropped-logo112-150x150.png" sizes="32x32" />
+<link rel="icon" href="http://csgo-news.ru/wp-content/uploads/2016/03/cropped-logo112-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://csgo-news.ru/wp-content/uploads/2016/03/cropped-logo112-300x300.png" />
+<meta name="msapplication-TileImage" content="http://csgo-news.ru/wp-content/uploads/2016/03/cropped-logo112-300x300.png" />
 	</head>
 	<body class="login login-action-login wp-core-ui  locale-ru-ru">
 	<div id="login">
 		<h1><a href="https://ru.wordpress.org/" title="Сайт работает на WordPress" tabindex="-1">cs go news</a></h1>
 	
-<form name="loginform" id="loginform" action="http://cs-go-news.tk/wp-login.php" method="post">
+<form name="loginform" id="loginform" action="http://csgo-news.ru/wp-login.php" method="post">
 	<p>
 		<label for="user_login">Имя пользователя или e-mail<br />
 		<input type="text" name="log" id="user_login" class="input" value="" size="20" /></label>
@@ -35,13 +35,13 @@
 		<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"  /> Запомнить меня</label></p>
 	<p class="submit">
 		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Войти" />
-		<input type="hidden" name="redirect_to" value="http://cs-go-news.tk/wp-admin/" />
+		<input type="hidden" name="redirect_to" value="http://csgo-news.ru/wp-admin/" />
 		<input type="hidden" name="testcookie" value="1" />
 	</p>
 </form>
 
 <p id="nav">
-	<a href="http://cs-go-news.tk/wp-login.php?action=lostpassword">Забыли пароль?</a>
+	<a href="http://csgo-news.ru/wp-login.php?action=lostpassword">Забыли пароль?</a>
 </p>
 
 <script type="text/javascript">
@@ -58,13 +58,13 @@ wp_attempt_focus();
 if(typeof wpOnload=='function')wpOnload();
 </script>
 
-	<p id="backtoblog"><a href="http://cs-go-news.tk/">&larr; Назад к сайту &laquo;cs go news&raquo;</a></p>
+	<p id="backtoblog"><a href="http://csgo-news.ru/">&larr; Назад к сайту &laquo;cs go news&raquo;</a></p>
 	
 	</div>
 
 	
-	<script type='text/javascript' src='http://cs-go-news.tk/wp-content/plugins/easy-vkontakte-connect/js/evc-share.js'></script>
-<script type='text/javascript' src='http://cs-go-news.tk/wp-content/plugins/easy-vkontakte-connect/js/social-likes.min.js?ver=3.0.4'></script>
+	<script type='text/javascript' src='http://csgo-news.ru/wp-content/plugins/easy-vkontakte-connect/js/evc-share.js'></script>
+<script type='text/javascript' src='http://csgo-news.ru/wp-content/plugins/easy-vkontakte-connect/js/social-likes.min.js?ver=3.0.4'></script>
 	<div class="clear"></div>
 	</body>
 	</html>
