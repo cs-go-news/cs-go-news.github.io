@@ -1,17 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html data-ng-app="app">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>CyberTar - cтавки на киберспорт Дота 2, КС ГО, StarCraft в рублях</title>
+    <title>CyberTar - экспресс ставки Dota 2, CS GO, WarFace на деньги</title>
     <meta name="description" content="Ставки на киберспорт CyberTar.com, здесь вы можите делать ставки Дота 2, КС ГО, StarCraft и League of Legends. Так же делать ставки в рулетке и участвовать розыгрыше лотереи.">
     <meta name="keywords" content="Ставки КС ГО, Ставки Дота, Ставки Dota, Киберспорт, Рулетка, Лотерея ">
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="bundles/app/css/style.css">
-    <link type="text/css" rel="stylesheet" href="bundles/app/css/reset.css">
-    <link type="text/css" rel="stylesheet" href="bundles/app/css/css.css">
-    <link type="text/css" rel="stylesheet" href="bundles/app/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="../bundles/app/css/style.css">
+    <link type="text/css" rel="stylesheet" href="../bundles/app/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="../bundles/app/css/css.css">
+    <link type="text/css" rel="stylesheet" href="../bundles/app/css/font-awesome.min.css">
 </head>
 <body data-ng-controller="AppCtrl">
 <div id="wrapper">
@@ -20,7 +20,7 @@
         <!--header-->
         <div id="header">
             <div class="container">
-                <a href="index.html" id="logo"></a>
+                <a href="../index.html" id="logo"></a>
                 <div class="h_sign">
                     <ul>
                                             <li><button class="popup-button psaction-showpopup-signin" id="sign_in" data-ng-click="isPopupLoginShow = true">Войти</button></li>
@@ -29,7 +29,7 @@
                         	                            </div>
                 <div class="h_menu">
                     <ul>
-                        <li><a href="http://forums.goha.ru/"><i></i>Форум</a></li>
+                            <li><a href="http://forums.goha.ru/"><i></i>Форум</a></li>
                         <li><a href="http://steamcommunity.com/sharedfiles/filedetails/?id=779416025"><i></i>Гайд по CS:GO</a></li>
                         <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=570783858"><i></i>Трейд</a></li>
                         <li><a href="../news.html"><i></i>Новости</a></li>
@@ -75,7 +75,7 @@
                         <li>{{ popup.message }}</li>
                         <li class="popup-dotted"></li>
                         <li class="center">
-                            <a href="http://CyberTar.com/{{&#32;popup.confirmUrl&#32;}}" class="popblock-btn">Да</a>
+                            <a href="http://CyberTar.com/bets/{{&#32;popup.confirmUrl&#32;}}" class="popblock-btn">Да</a>
                             <button type="submit" class="popblock-btn" data-ng-click="isPopupMessageConfirmUrlShow = false">Нет</button>
                         </li>
                     </ul>
@@ -627,7 +627,7 @@
                                     <input id="checkbox-register-1" type="checkbox"
                                            data-ng-model="registrationData.agree"
                                            data-ng-false-value="0" data-ng-true-value="1">
-                                    <label for="checkbox-register-1">Я принимаю <a href="index.html#">Политику конфиденциальности</a></label>
+                                    <label for="checkbox-register-1">Я принимаю <a href="express.html#">Политику конфиденциальности</a></label>
                                 </div>
                             </li>
                             <li style="margin-bottom:8px;">
@@ -654,8 +654,7 @@
     <div id="content" class="content-nord">
         <div class="side_main side_main1">
 
-            <!--Трансялции и чат-->
-            <div data-ng-controller="BroadcastCtrl" data-ng-init="setIsPlayerShow(1)">
+            <div data-ng-controller="BroadcastCtrl" data-ng-init="setIsPlayerShow()">
 
 <div class="div-cplayer">
   <div>
@@ -674,145 +673,297 @@
         <div class="twitch">
             <div class="twitch_player">
                 <div class="twich-iframe">
-                                    <img src="bundles/app/images/home/iframe-home.jpg" alt="SL i-L Dota" class="img-trasl">
+                                    <img src="../bundles/app/images/home/iframe-home.jpg" alt="SL i-L Dota" class="img-trasl">
                                 </div>
             </div>
             <div class="twitch_chat action-chat">
-               <img src="bundles/app/images/home/2.jpg" alt="SL i-L Dota" class="img-trasl">
+                <iframe data-ng-src="{{ chatPath }}"></iframe>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <!--carousel matches-->
+    <div class="broadcast_slider">
+        <ul>
+            <broadcast-slider></broadcast-slider>
+        </ul>
+    </div>
+
+    <div id="popup-broadcasts"></div>
 
 </div>
 <!--end carousel matches-->
 
-            <!--end Трансялции и чат-->
 
+            <div data-ng-controller="ExpressCtrl" data-ng-init="games = []; expressBetCommission = 0">
             <!--left-->
             <div class="side_left">
-                <!--Игры из картинок-->
-                <div class="short-imgbox">
-                    <div class="short-imgbox-in">
-                        <div>
-                            <a href="bets@games=1.html" title="Ставки кс го на деньги"><img src="bundles/app/images/home/cs.jpg" alt="Bets Counter-Strike Global" /></a>
-                            <div class="short-imgbox-overlay">
-                                <div class="short-imgbox-textbox">
-                                    <div>
-                                        <h4>Counter-Strike: Global Offensive</h4>
-                                        <p>Многопользовательский онлайн шутер Counter-Strike: Global Offensive сегодня является довольно популярной кибеспортивной дисциплиной. От своих предыдущих версий CS:GO отличается современной графикой и несколькими новыми режимами. Сама игра представляет собой противоборство двух действующих сторон: террористов и спецназа. Разнообразие игровых карт и значительный арсенал оружия позволяет реализовывать различные тактики как в атаке, так и обороне.</p>
-                                        <p>Перед началом соревнований команды проводят выбор карт, а победа на каждой отдельной карте присуждается после 16 выигранных раундов. В игровой процесс внедрена экономическая составляющая, которая заставляет коллективы тщательно продумывать выбор обмундирования и оружия на каждый отдельный раунд. Существенные призовые фонды турниров с каждым годом позволяют всё большему количеству игроков зарабатывать на этой игре.</p>
-                                    </div>
-                                    <a class="short-imgbox-btn" href="bets@games=6.html">Ставки на Counter-Strike</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="short-imgbox-in">
-                        <div>
-                            <a href="bets@games=3.html" title="Bets StarCraft"><img src="bundles/app/images/home/starcraft.jpg" alt="Bets StarCraft" /></a>
-                            <div class="short-imgbox-overlay">
-                                <div class="short-imgbox-textbox short-imgbox-textbox-sm">
-                                    <div>
-                                        <h4>StarCraft 2</h4>
-                                    </div>
-                                    <a class="short-imgbox-btn" href="bets@games=3.html">Сделать ставку</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="short-imgbox-in">
-                        <div>
-                            <a href="bets@games=4.html" title="Bets League of Legends"><img src="bundles/app/images/home/league.jpg" alt="League of Legends" /></a>
-                            <div class="short-imgbox-overlay">
-                                <div class="short-imgbox-textbox short-imgbox-textbox-sm">
-                                    <div>
-                                        <h4>League of Legends</h4>
-                                    </div>
-                                    <a class="short-imgbox-btn" href="bets@games=4.html">Сделать ставку</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="short-imgbox-in">
-                        <div>
-                            <a href="bets@games=2.html" title="Ставки на дота 2 в рублях"><img src="bundles/app/images/home/dota.jpg" alt="Ставки на Дота 2" /></a>
-                            <div class="short-imgbox-overlay">
-                                <div class="short-imgbox-textbox">
-                                    <div>
-                                        <h4>Dota 2</h4>
-                                        <p>Компьютерная многопользовательская онлайн-арена с элементами ролевой игры. Игра проходит на симметричной карте DotA из Warcraft III. Американская компания Valve уже на протяжении многих лет работает над развитием игры, регулярно выпускает обновления.</p>
-                                        <p>Игроку на выбор доступно более 100 героем, каждый из которых обладает своими уникальными навыками. Для повышения уровня своего персонажа герою необходимо получать очки опыта, которые даются за убийство нейтральных юнитов (крипов) и героев команды соперника. За золотые моменты можно покупать артефакты, которые в значительной степени усиливают отдельные способности персонажей. Главным соревнованием в мире Dota 2 является турнил The International.</p>
-                                    </div>
-                                    <a class="short-imgbox-btn" href="bets@games=2.html">Сделать ставку на Dota 2</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                 	<div class="short-imgbox-in">
-                        <div>
-                            <a href="bets@games=1.html" title="Bets World of Tanks"><img src="bundles/app/images/home/tanks.jpg" alt="World of Tanks" /></a>
-                            <div class="short-imgbox-overlay">
-                                <div class="short-imgbox-textbox short-imgbox-textbox-sm">
-                                    <div>
-                                        <h4>World of Tanks</h4>
-                                    </div>
-                                    <a class="short-imgbox-btn" href="bets@games=1.html">Сделать ставку</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="short-imgbox-in">
-                        <div>
-                            <a href="bets@games=9.html" title="Bets WarFace Money"><img src="bundles/app/images/home/warface.jpg" alt="Bets WarFcae " /></a>
-                            <div class="short-imgbox-overlay">
-                                <div class="short-imgbox-textbox short-imgbox-textbox-sm">
-                                    <div>
-                                        <h4>WarFace</h4>
-                                    </div>
-                                    <a class="short-imgbox-btn" href="bets@games=9.html">Сделать ставку</a>
-                                </div>
-                            </div>
+                <!--popup stavka-->
+                <div class="popup" id="popup-popstavka" data-ng-show="isPopupAskBetShow" data-ng-cloak>
+                    <div class="popup-background psaction-popup-close"></div>
+                    <div class="popblock popblock-mr">
+                        <div class="popblock-header">
+                            <p class="center"><span>Вы действительно хотите сделать ставку?</span></p><span class="popup-close" data-ng-click="isPopupAskBetShow = false"></span>
+                        </div>
+                        <div class="popblock-line"></div>
+                        <div class="popblock-content">
+                            <ul class="popstavka-form">
+                                <li>
+                                    <span><small>Сумма:</small> {{ bet.amount }} RUB</span>
+                                    <span><small>Коэффициент:</small> {{ coefficient }}</span>
+                                </li>
+                                <li class="popup-dotted"></li>
+                                <li class="center">
+                                    <button type="submit" class="popblock-btn" id="popup-a-popstavka-ok"  data-ng-click="sendBet()">Да</button>
+                                    <button type="submit" class="popblock-btn" data-ng-click="isPopupAskBetShow = false">Нет</button>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-
                 </div>
-                <!--end Игры из картинок-->
+                <!--end popup stavka-->
+
+
+                <!--matches choose-->
+                <div class="matches_choose">
+                    <div class="mc_settings">
+                        <div class="switcher switcher-big"> <i><img src="../bundles/app/images/fonts/active-table.png" alt="#"></i>
+                            <p>Выбрать матч</p>
+                        </div>
+                        <div class="tabs psaction-status-change">
+                            <div class="switcher-but switcher-but-full"><a class="button-classik" href="../bets.html">Простые ставки</a></div>
+                        </div>
+                        <div class="bets-checkbox">
+                                                            <div class="checkbox checkbox-primary">
+                                    <input id="checkbox-game-1" type="checkbox"
+                                           data-ng-click="selectGameId(1)"
+                                           name="games[]" value="1"
+                                           >
+                                    <label for="checkbox-game-1"><img src="../images-post/game/tanks.png"> <span>World of Tanks</span></label>
+                                </div>
+                                                            <div class="checkbox checkbox-primary">
+                                    <input id="checkbox-game-2" type="checkbox"
+                                           data-ng-click="selectGameId(2)"
+                                           name="games[]" value="2"
+                                           >
+                                    <label for="checkbox-game-2"><img src="../images-post/game/dota.png"> <span>Dota 2</span></label>
+                                </div>
+                                                            <div class="checkbox checkbox-primary">
+                                    <input id="checkbox-game-3" type="checkbox"
+                                           data-ng-click="selectGameId(3)"
+                                           name="games[]" value="3"
+                                           >
+                                    <label for="checkbox-game-3"><img src="../images-post/game/starcraft.png"> <span>StarCraft 2</span></label>
+                                </div>
+                                                            <div class="checkbox checkbox-primary">
+                                    <input id="checkbox-game-4" type="checkbox"
+                                           data-ng-click="selectGameId(4)"
+                                           name="games[]" value="4"
+                                           >
+                                    <label for="checkbox-game-4"><img src="../images-post/game/league.png"> <span>League of Legends</span></label>
+                                </div>
+                                                            <div class="checkbox checkbox-primary">
+                                    <input id="checkbox-game-5" type="checkbox"
+                                           data-ng-click="selectGameId(5)"
+                                           name="games[]" value="5"
+                                           >
+                                    <label for="checkbox-game-5"><img src="../images-post/game/storm.png"> <span>Heroes Of The Storm</span></label>
+                                </div>
+                                                            <div class="checkbox checkbox-primary">
+                                    <input id="checkbox-game-6" type="checkbox"
+                                           data-ng-click="selectGameId(6)"
+                                           name="games[]" value="6"
+                                           >
+                                    <label for="checkbox-game-6"><img src="../images-post/game/csgo.png"> <span>Counter-Strike</span></label>
+                                </div>
+                                                            <div class="checkbox checkbox-primary">
+                                    <input id="checkbox-game-7" type="checkbox"
+                                           data-ng-click="selectGameId(7)"
+                                           name="games[]" value="7"
+                                           >
+                                    <label for="checkbox-game-7"><img src="../images-post/game/smite.png"> <span>Smite</span></label>
+                                </div>
+                                                            <div class="checkbox checkbox-primary">
+                                    <input id="checkbox-game-8" type="checkbox"
+                                           data-ng-click="selectGameId(8)"
+                                           name="games[]" value="8"
+                                           >
+                                    <label for="checkbox-game-8"><img src="../images-post/game/Hearthstone.png"> <span>Hearthstone</span></label>
+                                </div>
+                                                            <div class="checkbox checkbox-primary">
+                                    <input id="checkbox-game-9" type="checkbox"
+                                           data-ng-click="selectGameId(9)"
+                                           name="games[]" value="9"
+                                           >
+                                    <label for="checkbox-game-9"><img src="../images-post/game/warface.png"> <span>WarFace</span></label>
+                                </div>
+                                                            <div class="checkbox checkbox-primary">
+                                    <input id="checkbox-game-10" type="checkbox"
+                                           data-ng-click="selectGameId(10)"
+                                           name="games[]" value="10"
+                                           >
+                                    <label for="checkbox-game-10"><img src="../images-post/game/Overwatch.png"> <span>Overwatch</span></label>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+                <!--end matches choose-->
+
+                <!--table matches-->
+                <div class="bh_table express_table">
+                    <table id="betsTable" class="table">
+                        <thead>
+                        <tr>
+                            <td>Дата</td>
+                            <td>Событие</td>
+                            <td>Игрок - 1</td>
+                            <td>Игрок - 2</td>
+                            <td width="53">К1</td>
+                            <td width="53">Ничья</td>
+                            <td width="53">К2</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr data-match-id="1" class="betstable-tr" data-toggle="buttons"
+                            data-ng-repeat-start="match in matches | orderBy: 'startTime':true | filter:filterByGameId"
+                            data-ng-cloak>
+                            <td>{{ match.startTime | date:"dd.MM HH:mm" }}</td>
+                            <td><p><img data-ng-src="{{ match.game.iconPath }}" alt="{{ match.game.name }}"> {{ match.event }}</p></td>
+                            <td><p><img data-ng-src="{{ match.flagIconOnePath }}"> {{ match.nickNameOne }}</p></td>
+                            <td><p><img data-ng-src="{{ match.flagIconTwoPath }}"> {{ match.nickNameTwo }}</p></td>
+                            <td><span class="btn btn-bets"
+                                      data-ng-click="setCoupon(match, 'first', match.coefficient.coefficientOne)"
+                                      data-ng-class="{ active: isActiveCoefficient(match, 'first'), 'non-coefficient': !match.coefficient.coefficientOne }">
+                                    {{ match.coefficient.coefficientOne }}</span>
+                            </td>
+                            <td><span class="btn btn-bets"
+                                      data-ng-click="setCoupon(match, 'draw', match.coefficient.coefficientDraw)"
+                                      data-ng-class="{ active: isActiveCoefficient(match, 'draw'), 'non-coefficient': !match.coefficient.coefficientDraw }">
+                                    {{ match.coefficient.coefficientDraw }}</span>
+                            </td>
+                            <td><span class="btn btn-bets"
+                                      data-ng-click="setCoupon(match, 'second', match.coefficient.coefficientTwo)"
+                                      data-ng-class="{ active: isActiveCoefficient(match, 'second'), 'non-coefficient': !match.coefficient.coefficientTwo }">
+                                    {{ match.coefficient.coefficientTwo }} </span></td>
+
+                            <td data-ng-click="popupMatchShow(match.id)"><p>{{ match.map }}</p></td>
+                                    
+                            <td data-ng-click="collapse[match.id] = !collapse[match.id]">
+                                <span data-ng-show="getCountSubMatch(match.subMatch) > 0" class="btn-coltr" data-ng-class="{ rotate: collapse[match.id] }"></span>
+                            </td>
+                        </tr>
+                        <tr class="collapse-tr" data-ng-repeat-end data-ng-cloak>
+                            <td colspan="9" class="collapse-td">
+                                <div class="collapse-table" data-ng-show="collapse[match.id]">
+                                    <table class="table">
+                                        <tbody>
+
+                                        <tr data-toggle="buttons" data-ng-repeat="sub in match.subMatch">
+                                            <td><span>{{ sub.startTime | date:"HH:mm" }}</span></td>
+                                            <td colspan="3"><p>{{ sub.title }}</p></td>
+                                            <td><span class="btn btn-bets"
+                                                      data-ng-click="setCoupon(sub, 'first', sub.coefficient.coefficientOne)"
+                                                      data-ng-class="{ active: isActiveCoefficient(sub, 'first'), 'non-coefficient': !sub.coefficient.coefficientOne }">
+                                                    {{ sub.coefficient.coefficientOne }} </span></td>
+                                            <td><span class="btn btn-bets non-coefficient"></span></td>
+                                            <td><span class="btn btn-bets"
+                                                      data-ng-click="setCoupon(sub, 'second', sub.coefficient.coefficientTwo)"
+                                                      data-ng-class="{ active: isActiveCoefficient(sub, 'second'), 'non-coefficient': !sub.coefficient.coefficientTwo }">
+                                                    {{ sub.coefficient.coefficientTwo }} </span></td>
+                                            <td></td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!--end table matches-->
+
             </div>
             <!--end left-->
+
             <!--right-->
             <div class="side_right">
-                <!--Новости игр-->
-                <!--<h2 class="h-light">Новости</h2>-->
-                <div class="short-newsbox">
-                                    <div>
-                        <a href="news/7.html" title="World Series of Sealed: Полный список участников">World Series of Sealed: Полный список участников</a>
-                        <p>Финальная часть турнира World Series of Sealed 2.0 по Hearthstone будет проходить в городе Санта-Ана, Калифорния, США. Организаторами соревнований, как и в случае с первым турниром, выступила студия Tempo Storm....</p>
-                    </div>
-                                    <div>
-                        <a href="news/6.html" title="Составы сборных Дании и Канады на TWC 2016">Составы сборных Дании и Канады на TWC 2016</a>
-                        <p>Сборные Канады и Дании объявили составы на LAN-финал The World Championships 2016. За датчан сыграют представители двух команд — Heroic и Rogue, а за канадцев выступят игроки TSM, Splyce и C...</p>
-                    </div>
-                                    <div>
-                        <a href="news/5.html" title="Состав сборной Франции на TWC 2016">Состав сборной Франции на TWC 2016</a>
-                        <p>Столица Сербии город Белград готовится принять финал турнира The World Championships 2016. Национальным командам предстоит разыграть призовой фонд в 100 тысяч долларов. Место проведения турнира - &quot;Комбанк Арена&quot;.....</p>
-                    </div>
-                                    <div>
-                        <a href="news/4.html" title="В Москве пройдет чемпионат Relax Ladder.">В москве пройдет чемпионат Relax Ladder.</a>
-                        <p>20 команд готовятся принять участие в турнире Esports Championship Series. Помимо призового фонда в размере 1.75 миллиона долларов сильнейшие коллективы из США и Европы разыграют квоты на LAN-финал ECS S2 и инвайты на ECS S3. Первые матчи состоятся уже 7 октября.</p>
-                    </div>
-                                    <div>
-                        <a href="news/3.html" title="HellRaisers и их состав на предстоящий сезон">HellRaisers и их состав на предстоящий сезон</a>
-                        <p>Организация HellRaisers официально утвердила состав команды по CS:GO. Капитанский слот занял Кирилл «ANGE1» Карасёв. По его словам &quot;восставшие из ада&quot; имеют довольно боевой состав, которому по силам бороться с самыми титулованными командами...</p>
-                    </div>
-                                    <div>
-                        <a href="news/2.html" title="The Boston Major 2016. Кто же получит приглашение ?">The Boston Major 2016. Кто же получит приглашение ?</a>
-                        <p>Игровое сообщество по Dota 2 находится в ожидании турнира The Major, который на этот раз пройдёт в Бостоне. Традиционно ожидается очень высокое качество проведения соревнований, за которое будет отвечать PGL. Восьми сильнейшим коллективам предстоит разыграть призовой фонд в 3 миллиона долларов....</p>
-                    </div>
-                
+                <div data-ng-show="user.length != 0" data-ng-cloak>
+    <div class="user-mh">
+        <p class="user-mh-balans"><b>Мой баланс: </b>{{ user.printableAccount }} RUB</p>
+        <a href="http://CyberTar.com/profile/payment"><i class="fa fa-cc-visa"></i> Пополнить баланс</a> <span class="user-mh-line"></span>
+        <p class="user-mh-balans"><b>Поинты: </b>{{ user.printablePoint }} ECB</p>
+        <a id="popup-aecb" data-ng-click="showChangePointPopup()"><i class="fa fa-cc-diners-club"></i> Обменять поинты</a>
+    </div>
+    <ul class="user-mh-plitka">
+        <li><a href="http://CyberTar.com/bets/history">История<br />ставок</a></li>
+        <li><a href="http://CyberTar.com/bets/express/history">История<br />экспресс</a></li>
+    </ul>
+</div>
+
+<!--popup ecb-->
+<div class="popup" id="popup-ecb" data-ng-show="isPopupChangePoint" data-ng-cloak>
+    <div class="popup-background psaction-popup-close"></div>
+    <div class="popblock">
+        <div class="popblock-header">
+            <p><i class="fa fa-cc-diners-club"></i> Обменять <span>поинты</span></p>
+            <span class="popup-close" data-ng-click="isPopupChangePoint = false"></span>
+        </div>
+        <div class="popblock-line"></div>
+        <div class="popblock-content">
+            <ul class="popblock-ecb">
+                <li>Минимальная сумма обмена</li>
+                <li><b>{{ minChange }} ECB</b></li>
+                <li class="popup-dotted"></li>
+                <li><button type="submit" data-ng-click="submitChangePoint()" class="popblock-btn">Обменять</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+                <div class="user-mh">
+                    <p class="user-mh-balans">Игровой купон</p>
+                    <span class="user-mh-line user-mh-line-sm"></span>
+                    <ul class="kupon-user">
+                        <li data-ng-repeat="match in couponMatches" data-ng-cloak>
+                            <span><img data-ng-src="{{  match.game.iconPath }}"></span>
+                            <span><img data-ng-src="{{ getFlagIconByBetOn(match) }}"> {{ getNicknameByBetOn(match) }}</span>
+                            <span>{{ getCoefficientByBetOn(match) }}</span>
+                            <span><a data-ng-click="removeCoupon(match)"><i class="fa fa-close"></i></a></span>
+                        </li>
+                    </ul>
                 </div>
-                <!--end Новости игр-->
+                <div class="user-admoney">
+                    <div class="user-admoney1">
+                        <a data-ng-click="changeBet(-100)" class="user-admoney-minus100">- 100</a>
+                        <a data-ng-click="changeBet(-10)" class="user-admoney-minus10">- 10</a>
+                        <div>
+                            <input type="text"
+                                   data-ng-change="changeBet()"
+                                   data-ng-model="bet.amount" size="5" maxlength="5" placeholder="0">
+                        </div>
+                        <a data-ng-click="changeBet(10)" class="user-admoney-plus10">+ 10</a>
+                        <a data-ng-click="changeBet(100)" class="user-admoney-plus100">+ 100</a>
+                    </div>
+                    <div class="kupon-bg">
+                                            <p class="kupon-user-p">Максимальная ставка: 1000 RUB</p>
+                        <span class="kupon-line"></span>
+                                            <p class="kupon-user-p">Общий коэффициент: <span data-ng-bind="coefficient"></span></p>
+                        <span class="kupon-line"></span>
+                        <p class="kupon-user-p">Мой выигрыш: <span data-ng-bind="prize"></span> RUB</p>
+                    </div>
+                                        <button class="btn-red"
+                            data-ng-click="showPopupLogin()">Сделать ставку</button>
+                                    </div>
             </div>
             <!--end right-->
+                </div>
             <div class="clearfix"></div>
-
-
         </div>
     </div>
     <!--end content-->
@@ -820,15 +971,15 @@
             <!--partners-->
             <div class="f_counters">
                 <ul>
-                                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item1.png" alt="Webmoney"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item2.png" alt="Visa"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item3.png" alt="Qiwi"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item4.png" alt="Яндекс Деньги"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item10.png" alt="Bitcoin"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item6.png" alt="MTS"></span></a></li>
-                    <li><a href="http://www.free-kassa.ru/"><span><img src="images-post/pay/free-kassa.png" alt="FreeKassa"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item8.png" alt="Okpay"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item9.png" alt="Payeer"></span></a></li>
+                                    <li><a href="express.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item1.png" alt="Webmoney"></span></a></li>
+                    <li><a href="express.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item2.png" alt="Visa"></span></a></li>
+                    <li><a href="express.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item3.png" alt="Qiwi"></span></a></li>
+                    <li><a href="express.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item4.png" alt="Яндекс Деньги"></span></a></li>
+                    <li><a href="express.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item10.png" alt="Bitcoin"></span></a></li>
+                    <li><a href="express.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item6.png" alt="MTS"></span></a></li>
+                    <li><a href="http://www.free-kassa.ru/"><span><img src="../images-post/pay/free-kassa.png" alt="FreeKassa"></span></a></li>
+                    <li><a href="express.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item8.png" alt="Okpay"></span></a></li>
+                    <li><a href="express.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item9.png" alt="Payeer"></span></a></li>
                                 </ul>
             </div>
             <!--end partners-->
@@ -838,20 +989,27 @@
 
         <div id="footer">
             <div class="footer-wr">
-                <div class="footer-logo"><a href="http://CyberTar.com/CyberTar"><img src="bundles/app/images/fonts/logo.png" alt="CyberTar"></a></div>
+                <div class="footer-logo"><a href="http://CyberTar.com/bets/CyberTar"><img src="../bundles/app/images/fonts/logo.png" alt="CyberTar"></a></div>
                 <div class="f_menu">
                     <ul>
-                        <li><a href="articles/about.html">О нас</a></li>
-                        <li><a href="articles/info.html">Справка</a></li>
-                        <li><a href="articles/rules.html">Правила</a></li>
-                        <li><a href="articles/partners.html">Партнерам</a></li>
-                        <li><a href="articles/sales.html">Акции</a></li>
-                        
+                        <li><a href="../articles/about.html">О нас</a></li>
+                        <li><a href="../articles/info.html">Справка</a></li>
+                        <li><a href="../articles/rules.html">Правила</a></li>
+                        <li><a href="../articles/partners.html">Партнерам</a></li>
+                        <li><a href="../articles/sales.html">Акции</a></li>
                     </ul>
                 </div>
                 <div class="footer-text">
                     <p>Компьютерные игры сегодня являются не только развлечением для большого количества людей, но и соревновательной площадкой в рамках киберспорта. Большое количество турниров по таким дисциплинам как Dota 2, Counter-Strike: Global Offensive, League of Legends, StarCraft 2, World of Tanks позволяет игрокам не только продемонстрировать свои игровые навыки, но и заработать реальные деньги. Портал e-cyberbets.com принимает ставки на игровые события. Мы предлагаем Вам большой выбор платёжных систем, высокие коэффициенты, удобный и приятный интерфейс.</p>
-                    
+                    <div class="social_links">
+                        <ul>
+                            <li><a href="https://www.youtube.com/channel/UCfSfdWlgLM-FOzAxGPFtCKg" target="_blank"><img src="../bundles/app/images/social/yt-icon.png" alt="YouTube"></a></li>
+                            <li><a href="https://twitter.com/CyberTar" target="_blank"><img src="../bundles/app/images/social/tw-icon.png" alt="Twitter"></a></li>
+                            <li><a href="https://vk.com/club131066828" target="_blank"><img src="../bundles/app/images/social/vk-icon.png" alt="Vkontakte"></a></li>
+                            <li><a href="https://www.facebook.com/groups/1881811582048878" target="_blank"><img src="../bundles/app/images/social/fb-icons.png" alt="Facebook"></a></li>
+                            <li><a href="../index.html" target="_blank"><img src="../bundles/app/images/fonts/18+.png" alt="18+"></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -863,26 +1021,26 @@
     </div>
 </div>
 
-<script src="bundles/app/js/jquery-1.10.2.min.js"></script>
-<script src="libs/angular/angular.min.js"></script>
-<script src="bundles/app/js/jquery.countdown.js"></script>
-<script src="bundles/app/js/jquery-ui.js"></script>
-<script src="bundles/app/js/jquery.bxslider.min.js"></script>
-<script src="bundles/app/js/scripts.js"></script>
-<script src="bundles/app/js/1-libs.js"></script>
-<script src="bundles/app/js/bootstrap.min.js"></script>
-<script src="bundles/app/js/angular/App.js"></script>
-<script src="bundles/app/js/angular/directives/OnRepeatFinished.js"></script>
-<script src="bundles/app/js/angular/directives/BroadcastSlider.js"></script>
-<script src="bundles/app/js/angular/AppCtrl.js"></script>
-<script src="bundles/app/js/angular/BroadcastCtrl.js"></script>
-<script src="bundles/app/js/angular/BetCtrl.js"></script>
-<script src="bundles/app/js/angular/ProfileSideBarCtrl.js"></script>
-<script src="bundles/app/js/angular/ResetCtrl.js"></script>
-<script src="bundles/app/js/angular/ExpressCtrl.js"></script>
-<script src="bundles/app/js/angular/MessageCtrl.js"></script>
-<script src="bundles/app/js/angular/CashOutCtrl.js"></script>
-<script src="bundles/app/js/angular/PaymentCtrl.js"></script>
+<script src="../bundles/app/js/jquery-1.10.2.min.js"></script>
+<script src="../libs/angular/angular.min.js"></script>
+<script src="../bundles/app/js/jquery.countdown.js"></script>
+<script src="../bundles/app/js/jquery-ui.js"></script>
+<script src="../bundles/app/js/jquery.bxslider.min.js"></script>
+<script src="../bundles/app/js/scripts.js"></script>
+<script src="../bundles/app/js/1-libs.js"></script>
+<script src="../bundles/app/js/bootstrap.min.js"></script>
+<script src="../bundles/app/js/angular/App.js"></script>
+<script src="../bundles/app/js/angular/directives/OnRepeatFinished.js"></script>
+<script src="../bundles/app/js/angular/directives/BroadcastSlider.js"></script>
+<script src="../bundles/app/js/angular/AppCtrl.js"></script>
+<script src="../bundles/app/js/angular/BroadcastCtrl.js"></script>
+<script src="../bundles/app/js/angular/BetCtrl.js"></script>
+<script src="../bundles/app/js/angular/ProfileSideBarCtrl.js"></script>
+<script src="../bundles/app/js/angular/ResetCtrl.js"></script>
+<script src="../bundles/app/js/angular/ExpressCtrl.js"></script>
+<script src="../bundles/app/js/angular/MessageCtrl.js"></script>
+<script src="../bundles/app/js/angular/CashOutCtrl.js"></script>
+<script src="../bundles/app/js/angular/PaymentCtrl.js"></script>
     <!-- Start SiteHeart code -->
 <script>
 (function(){

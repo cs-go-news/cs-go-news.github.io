@@ -1,0 +1,74 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+.ng-hide:not(.ng-hide-animate) {
+    /* this is just another form of hiding an element */
+    display: block!important;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+.popup {
+    display: block;
+}
+.popup.hide {
+    display: none;
+}
+
+.profile-edit-bird > div > span {
+    float: left;
+    width: 33.3333%;
+}
+
+.profile-edit-bird > div > span > span {
+    display: block;
+    margin-right: 15px;
+    width: auto !important;
+}
+
+.btn-cplayer span {
+    display: block;
+}
+.player-animate-show {
+    display: block;
+    transition: 0.35s linear all;
+}
+
+.player-animate-show.ng-hide {
+    display: none;
+    opacity: 0;
+}
+
+.tabs ul li.active a, .tabs ul li:hover a {
+    color: #007498;
+}
+
+.rotate {
+    transform: rotate(180deg) !important;
+}
+
+/*betstable-check*/
+.match-past {
+    color: #eee !important;
+}
+.match-now {
+    color: #DC0E0E !important;
+}
+.match-future {
+    color: #007498 !important;
+}
+
+.btn-bets.non-coefficient,
+.btn-bets.non-coefficient:hover,
+.btn-bets.non-coefficient :active {
+    background: rgba(0, 118, 155, 0.05);
+    border: 1px solid rgba(3, 195, 255, 0.02);
+}
+
+.btn-red[disabled="disabled"]:hover {
+    background:rgba(235,73,35,0.2);
+    border:1px solid rgba(195,35,30,0.3);
+    color:#fff;
+}
+
+#popup-broadcasts iframe {width: 700px !important; min-height: 393px !important;}

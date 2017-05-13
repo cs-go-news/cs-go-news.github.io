@@ -1,17 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html data-ng-app="app">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>CyberTar - cтавки на киберспорт Дота 2, КС ГО, StarCraft в рублях</title>
-    <meta name="description" content="Ставки на киберспорт CyberTar.com, здесь вы можите делать ставки Дота 2, КС ГО, StarCraft и League of Legends. Так же делать ставки в рулетке и участвовать розыгрыше лотереи.">
-    <meta name="keywords" content="Ставки КС ГО, Ставки Дота, Ставки Dota, Киберспорт, Рулетка, Лотерея ">
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="bundles/app/css/style.css">
-    <link type="text/css" rel="stylesheet" href="bundles/app/css/reset.css">
-    <link type="text/css" rel="stylesheet" href="bundles/app/css/css.css">
-    <link type="text/css" rel="stylesheet" href="bundles/app/css/font-awesome.min.css">
+    <title>Кто получит очередное приглашение на The Boston Major 2016</title>
+    <meta name="description" content="Пользователь портала Reddit.com под ником CornGun предположил, кто получит приглашения на The Boston Major. За основу анализа CornGun взял результаты команд в отрезок времени от The Internat...">
+    <meta name="keywords" content="Major">
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="../bundles/app/css/style.css">
+    <link type="text/css" rel="stylesheet" href="../bundles/app/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="../bundles/app/css/css.css">
+    <link type="text/css" rel="stylesheet" href="../bundles/app/css/font-awesome.min.css">
 </head>
 <body data-ng-controller="AppCtrl">
 <div id="wrapper">
@@ -20,7 +20,7 @@
         <!--header-->
         <div id="header">
             <div class="container">
-                <a href="index.html" id="logo"></a>
+                <a href="../index.html" id="logo"></a>
                 <div class="h_sign">
                     <ul>
                                             <li><button class="popup-button psaction-showpopup-signin" id="sign_in" data-ng-click="isPopupLoginShow = true">Войти</button></li>
@@ -29,7 +29,7 @@
                         	                            </div>
                 <div class="h_menu">
                     <ul>
-                        <li><a href="http://forums.goha.ru/"><i></i>Форум</a></li>
+                            <li><a href="http://forums.goha.ru/"><i></i>Форум</a></li>
                         <li><a href="http://steamcommunity.com/sharedfiles/filedetails/?id=779416025"><i></i>Гайд по CS:GO</a></li>
                         <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=570783858"><i></i>Трейд</a></li>
                         <li><a href="../news.html"><i></i>Новости</a></li>
@@ -75,7 +75,7 @@
                         <li>{{ popup.message }}</li>
                         <li class="popup-dotted"></li>
                         <li class="center">
-                            <a href="http://CyberTar.com/{{&#32;popup.confirmUrl&#32;}}" class="popblock-btn">Да</a>
+                            <a href="http://CyberTar.com/news/{{&#32;popup.confirmUrl&#32;}}" class="popblock-btn">Да</a>
                             <button type="submit" class="popblock-btn" data-ng-click="isPopupMessageConfirmUrlShow = false">Нет</button>
                         </li>
                     </ul>
@@ -627,7 +627,7 @@
                                     <input id="checkbox-register-1" type="checkbox"
                                            data-ng-model="registrationData.agree"
                                            data-ng-false-value="0" data-ng-true-value="1">
-                                    <label for="checkbox-register-1">Я принимаю <a href="index.html#">Политику конфиденциальности</a></label>
+                                    <label for="checkbox-register-1">Я принимаю <a href="2.html#">Политику конфиденциальности</a></label>
                                 </div>
                             </li>
                             <li style="margin-bottom:8px;">
@@ -651,168 +651,64 @@
         <div class="container container-hid">
 
                 <!--content-->
-    <div id="content" class="content-nord">
+    <div id="content">
         <div class="side_main side_main1">
-
-            <!--Трансялции и чат-->
-            <div data-ng-controller="BroadcastCtrl" data-ng-init="setIsPlayerShow(1)">
-
-<div class="div-cplayer">
-  <div>
-    <a class="btn-cplayer">
-
-        <span data-ng-show="isPlayerShow"
-              data-ng-click="isPlayerShow = false; setInLocalStorageIsPlayerShow(false)"
-              data-ng-cloak><i class="fa fa-play"></i> Закрыть трансляцию</span>
-        <span data-ng-hide="isPlayerShow"
-              data-ng-click="isPlayerShow = true; setInLocalStorageIsPlayerShow(true)"
-              data-ng-cloak><i class="fa fa-play"></i> Открыть трансляцию</span>
-    </a>
-</div>
-</div>
-    <div class="player-animate-show" data-ng-show="isPlayerShow" data-ng-cloak>
-        <div class="twitch">
-            <div class="twitch_player">
-                <div class="twich-iframe">
-                                    <img src="bundles/app/images/home/iframe-home.jpg" alt="SL i-L Dota" class="img-trasl">
-                                </div>
-            </div>
-            <div class="twitch_chat action-chat">
-               <img src="bundles/app/images/home/2.jpg" alt="SL i-L Dota" class="img-trasl">
-
-</div>
-<!--end carousel matches-->
-
-            <!--end Трансялции и чат-->
 
             <!--left-->
             <div class="side_left">
-                <!--Игры из картинок-->
-                <div class="short-imgbox">
-                    <div class="short-imgbox-in">
-                        <div>
-                            <a href="bets@games=1.html" title="Ставки кс го на деньги"><img src="bundles/app/images/home/cs.jpg" alt="Bets Counter-Strike Global" /></a>
-                            <div class="short-imgbox-overlay">
-                                <div class="short-imgbox-textbox">
-                                    <div>
-                                        <h4>Counter-Strike: Global Offensive</h4>
-                                        <p>Многопользовательский онлайн шутер Counter-Strike: Global Offensive сегодня является довольно популярной кибеспортивной дисциплиной. От своих предыдущих версий CS:GO отличается современной графикой и несколькими новыми режимами. Сама игра представляет собой противоборство двух действующих сторон: террористов и спецназа. Разнообразие игровых карт и значительный арсенал оружия позволяет реализовывать различные тактики как в атаке, так и обороне.</p>
-                                        <p>Перед началом соревнований команды проводят выбор карт, а победа на каждой отдельной карте присуждается после 16 выигранных раундов. В игровой процесс внедрена экономическая составляющая, которая заставляет коллективы тщательно продумывать выбор обмундирования и оружия на каждый отдельный раунд. Существенные призовые фонды турниров с каждым годом позволяют всё большему количеству игроков зарабатывать на этой игре.</p>
-                                    </div>
-                                    <a class="short-imgbox-btn" href="bets@games=6.html">Ставки на Counter-Strike</a>
-                                </div>
-                            </div>
-                        </div>
+                <h1 class="h-page" style="text-transform: none;"><i class="fa fa-newspaper-o"></i><span>The Boston Major 2016. Кто же получит приглашение ?</span></h1>
+                <div class="fstory">
+                    <div class="fstory-content">
+                        <p><img src="../images-post/news/2016/07-10-Major.jpg" alt="The Boston Major 2016" width="880" height="598" /></p>
+<p>Не так давно завершился крупнейший турнир года по Dota 2 The International 6, как киберспортивные команды готовятся к очередному The Major. На этот раз лан-финал пройдёт в Бостоне, и компании Valve вскоре предстоит определиться каким командам дать прямые инвайты. Пока точной информации по этому вопросу нет, но промежуточные итоги по результатам этого года можно подвести.</p>
+<p>На прошлые турниры приглашали команды, занявшие шесть первых мест на The International. В 2016 году ими стали Wings Gaming, Digital Chaos, Evil Geniuses, Fnatic, EHOME и MVP Phoenix. Поэтому именно эти коллективы скорее всего сразятся и в Бостоне. Два оставшихся инвайта могут уйти первому и второму месту на MarsTV Dota 2 League 2016 Autumn.</p>
+<p>Но так как этот турнир выиграли "злые", то приглашение может уйти Newbee и OG. Дата проведения турнира назначена на 7 - 10 декабря. Призовой фонд уже сегодня составляет 3 миллиона долларов. За организацию турнира будет отвечать компания PGL, которая уже зарекомендовала себя на The Manila Major 2016 и DreamHack Bucharest 2016.</p>
                     </div>
-                    <div class="short-imgbox-in">
-                        <div>
-                            <a href="bets@games=3.html" title="Bets StarCraft"><img src="bundles/app/images/home/starcraft.jpg" alt="Bets StarCraft" /></a>
-                            <div class="short-imgbox-overlay">
-                                <div class="short-imgbox-textbox short-imgbox-textbox-sm">
-                                    <div>
-                                        <h4>StarCraft 2</h4>
-                                    </div>
-                                    <a class="short-imgbox-btn" href="bets@games=3.html">Сделать ставку</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="short-imgbox-in">
-                        <div>
-                            <a href="bets@games=4.html" title="Bets League of Legends"><img src="bundles/app/images/home/league.jpg" alt="League of Legends" /></a>
-                            <div class="short-imgbox-overlay">
-                                <div class="short-imgbox-textbox short-imgbox-textbox-sm">
-                                    <div>
-                                        <h4>League of Legends</h4>
-                                    </div>
-                                    <a class="short-imgbox-btn" href="bets@games=4.html">Сделать ставку</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="short-imgbox-in">
-                        <div>
-                            <a href="bets@games=2.html" title="Ставки на дота 2 в рублях"><img src="bundles/app/images/home/dota.jpg" alt="Ставки на Дота 2" /></a>
-                            <div class="short-imgbox-overlay">
-                                <div class="short-imgbox-textbox">
-                                    <div>
-                                        <h4>Dota 2</h4>
-                                        <p>Компьютерная многопользовательская онлайн-арена с элементами ролевой игры. Игра проходит на симметричной карте DotA из Warcraft III. Американская компания Valve уже на протяжении многих лет работает над развитием игры, регулярно выпускает обновления.</p>
-                                        <p>Игроку на выбор доступно более 100 героем, каждый из которых обладает своими уникальными навыками. Для повышения уровня своего персонажа герою необходимо получать очки опыта, которые даются за убийство нейтральных юнитов (крипов) и героев команды соперника. За золотые моменты можно покупать артефакты, которые в значительной степени усиливают отдельные способности персонажей. Главным соревнованием в мире Dota 2 является турнил The International.</p>
-                                    </div>
-                                    <a class="short-imgbox-btn" href="bets@games=2.html">Сделать ставку на Dota 2</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                 	<div class="short-imgbox-in">
-                        <div>
-                            <a href="bets@games=1.html" title="Bets World of Tanks"><img src="bundles/app/images/home/tanks.jpg" alt="World of Tanks" /></a>
-                            <div class="short-imgbox-overlay">
-                                <div class="short-imgbox-textbox short-imgbox-textbox-sm">
-                                    <div>
-                                        <h4>World of Tanks</h4>
-                                    </div>
-                                    <a class="short-imgbox-btn" href="bets@games=1.html">Сделать ставку</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="short-imgbox-in">
-                        <div>
-                            <a href="bets@games=9.html" title="Bets WarFace Money"><img src="bundles/app/images/home/warface.jpg" alt="Bets WarFcae " /></a>
-                            <div class="short-imgbox-overlay">
-                                <div class="short-imgbox-textbox short-imgbox-textbox-sm">
-                                    <div>
-                                        <h4>WarFace</h4>
-                                    </div>
-                                    <a class="short-imgbox-btn" href="bets@games=9.html">Сделать ставку</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!--end Игры из картинок-->
+                    <span class="fstory-info"><small></small><small></small></span> </div>
             </div>
             <!--end left-->
+
             <!--right-->
-            <div class="side_right">
-                <!--Новости игр-->
-                <!--<h2 class="h-light">Новости</h2>-->
-                <div class="short-newsbox">
-                                    <div>
-                        <a href="news/7.html" title="World Series of Sealed: Полный список участников">World Series of Sealed: Полный список участников</a>
-                        <p>Финальная часть турнира World Series of Sealed 2.0 по Hearthstone будет проходить в городе Санта-Ана, Калифорния, США. Организаторами соревнований, как и в случае с первым турниром, выступила студия Tempo Storm....</p>
-                    </div>
-                                    <div>
-                        <a href="news/6.html" title="Составы сборных Дании и Канады на TWC 2016">Составы сборных Дании и Канады на TWC 2016</a>
-                        <p>Сборные Канады и Дании объявили составы на LAN-финал The World Championships 2016. За датчан сыграют представители двух команд — Heroic и Rogue, а за канадцев выступят игроки TSM, Splyce и C...</p>
-                    </div>
-                                    <div>
-                        <a href="news/5.html" title="Состав сборной Франции на TWC 2016">Состав сборной Франции на TWC 2016</a>
-                        <p>Столица Сербии город Белград готовится принять финал турнира The World Championships 2016. Национальным командам предстоит разыграть призовой фонд в 100 тысяч долларов. Место проведения турнира - &quot;Комбанк Арена&quot;.....</p>
-                    </div>
-                                    <div>
-                        <a href="news/4.html" title="В Москве пройдет чемпионат Relax Ladder.">В москве пройдет чемпионат Relax Ladder.</a>
-                        <p>20 команд готовятся принять участие в турнире Esports Championship Series. Помимо призового фонда в размере 1.75 миллиона долларов сильнейшие коллективы из США и Европы разыграют квоты на LAN-финал ECS S2 и инвайты на ECS S3. Первые матчи состоятся уже 7 октября.</p>
-                    </div>
-                                    <div>
-                        <a href="news/3.html" title="HellRaisers и их состав на предстоящий сезон">HellRaisers и их состав на предстоящий сезон</a>
-                        <p>Организация HellRaisers официально утвердила состав команды по CS:GO. Капитанский слот занял Кирилл «ANGE1» Карасёв. По его словам &quot;восставшие из ада&quot; имеют довольно боевой состав, которому по силам бороться с самыми титулованными командами...</p>
-                    </div>
-                                    <div>
-                        <a href="news/2.html" title="The Boston Major 2016. Кто же получит приглашение ?">The Boston Major 2016. Кто же получит приглашение ?</a>
-                        <p>Игровое сообщество по Dota 2 находится в ожидании турнира The Major, который на этот раз пройдёт в Бостоне. Традиционно ожидается очень высокое качество проведения соревнований, за которое будет отвечать PGL. Восьми сильнейшим коллективам предстоит разыграть призовой фонд в 3 миллиона долларов....</p>
-                    </div>
-                
-                </div>
-                <!--end Новости игр-->
-            </div>
-            <!--end right-->
+<div class="side_right">
+
+                                    
+    <div class="content-sidebar">
+    <ul>
+        <li><a href="../bets@games=6.html">
+                <div><img class="content-sidebar-icon" src="../bundles/app/images/game/cs-icon.png" alt="#"></div>
+                <span>Counter Strike</span></a></li>
+        <li><a href="../bets@games=2.html">
+                <div><img class="content-sidebar-icon" src="../bundles/app/images/game/dota-2-icon.png" alt="#"></div>
+                <span>DOTA 2</span></a></li>
+        <li><a href="../bets@games=3.html">
+                <div><img class="content-sidebar-icon" src="../bundles/app/images/game/sc-2-icon.png" alt="#"></div>
+                <span>STARCRAFT 2</span></a></li>
+        <li><a href="../bets@games=4.html">
+                <div><img class="content-sidebar-icon" src="../bundles/app/images/game/lol-icon.png" alt="#"></div>
+                <span>League of Legends</span></a></li>
+        <li><a href="../bets@games=1.html">
+                <div><img class="content-sidebar-icon" src="../bundles/app/images/game/wot-icon.png" alt="#"></div>
+                <span>World of Tanks</span></a></li>
+        <li><a href="../bets@games=5.html">
+                <div><img class="content-sidebar-icon" src="../bundles/app/images/game/hos-icon.png" alt="#"></div>
+                <span>Heroes Of Storm</span></a></li>
+        <li><a href="../bets@games=10.html">
+                                <div><img class="content-sidebar-icon" src="../bundles/app/images/game/overmatch.png" alt="#"></div>
+                                <span>Overwatch</span></a></li>
+        <li><a href="../bets@games=9.html">
+                <div><img class="content-sidebar-icon" src="../bundles/app/images/game/wf-icon.png" alt="#"></div>
+                <span>WarFace</span></a></li>
+        <li><a href="../bets@games=8.html">
+                <div><img class="content-sidebar-icon" src="../bundles/app/images/game/hs-icon.png" alt="#"></div>
+                <span>Hearthstone</span></a></li>
+        <li><a href="../bets@games=7.html">
+                <div><img class="content-sidebar-icon" src="../bundles/app/images/game/smite-icon.png" alt="#"></div>
+                <span>Smite</span></a></li>
+    </ul>
+</div>
+</div>
+<!--end right-->
             <div class="clearfix"></div>
-
-
         </div>
     </div>
     <!--end content-->
@@ -820,15 +716,15 @@
             <!--partners-->
             <div class="f_counters">
                 <ul>
-                                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item1.png" alt="Webmoney"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item2.png" alt="Visa"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item3.png" alt="Qiwi"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item4.png" alt="Яндекс Деньги"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item10.png" alt="Bitcoin"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item6.png" alt="MTS"></span></a></li>
-                    <li><a href="http://www.free-kassa.ru/"><span><img src="images-post/pay/free-kassa.png" alt="FreeKassa"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item8.png" alt="Okpay"></span></a></li>
-                    <li><a href="index.html" data-ng-click="showPopupLogin()"><span><img src="bundles/app/images/pay/item9.png" alt="Payeer"></span></a></li>
+                                    <li><a href="2.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item1.png" alt="Webmoney"></span></a></li>
+                    <li><a href="2.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item2.png" alt="Visa"></span></a></li>
+                    <li><a href="2.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item3.png" alt="Qiwi"></span></a></li>
+                    <li><a href="2.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item4.png" alt="Яндекс Деньги"></span></a></li>
+                    <li><a href="2.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item10.png" alt="Bitcoin"></span></a></li>
+                    <li><a href="2.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item6.png" alt="MTS"></span></a></li>
+                    <li><a href="http://www.free-kassa.ru/"><span><img src="../images-post/pay/free-kassa.png" alt="FreeKassa"></span></a></li>
+                    <li><a href="2.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item8.png" alt="Okpay"></span></a></li>
+                    <li><a href="2.html" data-ng-click="showPopupLogin()"><span><img src="../bundles/app/images/pay/item9.png" alt="Payeer"></span></a></li>
                                 </ul>
             </div>
             <!--end partners-->
@@ -838,20 +734,27 @@
 
         <div id="footer">
             <div class="footer-wr">
-                <div class="footer-logo"><a href="http://CyberTar.com/CyberTar"><img src="bundles/app/images/fonts/logo.png" alt="CyberTar"></a></div>
+                <div class="footer-logo"><a href="http://CyberTar.com/news/CyberTar"><img src="../bundles/app/images/fonts/logo.png" alt="CyberTar"></a></div>
                 <div class="f_menu">
                     <ul>
-                        <li><a href="articles/about.html">О нас</a></li>
-                        <li><a href="articles/info.html">Справка</a></li>
-                        <li><a href="articles/rules.html">Правила</a></li>
-                        <li><a href="articles/partners.html">Партнерам</a></li>
-                        <li><a href="articles/sales.html">Акции</a></li>
-                        
+                        <li><a href="../articles/about.html">О нас</a></li>
+                        <li><a href="../articles/info.html">Справка</a></li>
+                        <li><a href="../articles/rules.html">Правила</a></li>
+                        <li><a href="../articles/partners.html">Партнерам</a></li>
+                        <li><a href="../articles/sales.html">Акции</a></li>
                     </ul>
                 </div>
                 <div class="footer-text">
                     <p>Компьютерные игры сегодня являются не только развлечением для большого количества людей, но и соревновательной площадкой в рамках киберспорта. Большое количество турниров по таким дисциплинам как Dota 2, Counter-Strike: Global Offensive, League of Legends, StarCraft 2, World of Tanks позволяет игрокам не только продемонстрировать свои игровые навыки, но и заработать реальные деньги. Портал e-cyberbets.com принимает ставки на игровые события. Мы предлагаем Вам большой выбор платёжных систем, высокие коэффициенты, удобный и приятный интерфейс.</p>
-                    
+                    <div class="social_links">
+                        <ul>
+                            <li><a href="https://www.youtube.com/channel/UCfSfdWlgLM-FOzAxGPFtCKg" target="_blank"><img src="../bundles/app/images/social/yt-icon.png" alt="YouTube"></a></li>
+                            <li><a href="https://twitter.com/CyberTar" target="_blank"><img src="../bundles/app/images/social/tw-icon.png" alt="Twitter"></a></li>
+                            <li><a href="https://vk.com/club131066828" target="_blank"><img src="../bundles/app/images/social/vk-icon.png" alt="Vkontakte"></a></li>
+                            <li><a href="https://www.facebook.com/groups/1881811582048878" target="_blank"><img src="../bundles/app/images/social/fb-icons.png" alt="Facebook"></a></li>
+                            <li><a href="../index.html" target="_blank"><img src="../bundles/app/images/fonts/18+.png" alt="18+"></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -863,26 +766,26 @@
     </div>
 </div>
 
-<script src="bundles/app/js/jquery-1.10.2.min.js"></script>
-<script src="libs/angular/angular.min.js"></script>
-<script src="bundles/app/js/jquery.countdown.js"></script>
-<script src="bundles/app/js/jquery-ui.js"></script>
-<script src="bundles/app/js/jquery.bxslider.min.js"></script>
-<script src="bundles/app/js/scripts.js"></script>
-<script src="bundles/app/js/1-libs.js"></script>
-<script src="bundles/app/js/bootstrap.min.js"></script>
-<script src="bundles/app/js/angular/App.js"></script>
-<script src="bundles/app/js/angular/directives/OnRepeatFinished.js"></script>
-<script src="bundles/app/js/angular/directives/BroadcastSlider.js"></script>
-<script src="bundles/app/js/angular/AppCtrl.js"></script>
-<script src="bundles/app/js/angular/BroadcastCtrl.js"></script>
-<script src="bundles/app/js/angular/BetCtrl.js"></script>
-<script src="bundles/app/js/angular/ProfileSideBarCtrl.js"></script>
-<script src="bundles/app/js/angular/ResetCtrl.js"></script>
-<script src="bundles/app/js/angular/ExpressCtrl.js"></script>
-<script src="bundles/app/js/angular/MessageCtrl.js"></script>
-<script src="bundles/app/js/angular/CashOutCtrl.js"></script>
-<script src="bundles/app/js/angular/PaymentCtrl.js"></script>
+<script src="../bundles/app/js/jquery-1.10.2.min.js"></script>
+<script src="../libs/angular/angular.min.js"></script>
+<script src="../bundles/app/js/jquery.countdown.js"></script>
+<script src="../bundles/app/js/jquery-ui.js"></script>
+<script src="../bundles/app/js/jquery.bxslider.min.js"></script>
+<script src="../bundles/app/js/scripts.js"></script>
+<script src="../bundles/app/js/1-libs.js"></script>
+<script src="../bundles/app/js/bootstrap.min.js"></script>
+<script src="../bundles/app/js/angular/App.js"></script>
+<script src="../bundles/app/js/angular/directives/OnRepeatFinished.js"></script>
+<script src="../bundles/app/js/angular/directives/BroadcastSlider.js"></script>
+<script src="../bundles/app/js/angular/AppCtrl.js"></script>
+<script src="../bundles/app/js/angular/BroadcastCtrl.js"></script>
+<script src="../bundles/app/js/angular/BetCtrl.js"></script>
+<script src="../bundles/app/js/angular/ProfileSideBarCtrl.js"></script>
+<script src="../bundles/app/js/angular/ResetCtrl.js"></script>
+<script src="../bundles/app/js/angular/ExpressCtrl.js"></script>
+<script src="../bundles/app/js/angular/MessageCtrl.js"></script>
+<script src="../bundles/app/js/angular/CashOutCtrl.js"></script>
+<script src="../bundles/app/js/angular/PaymentCtrl.js"></script>
     <!-- Start SiteHeart code -->
 <script>
 (function(){
